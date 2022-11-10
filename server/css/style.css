@@ -1,0 +1,231 @@
+@charset "UTF-8";
+/* 
+共通部分
+--------------------------*/
+html {
+    font-size: 100%;
+}
+body {
+    font-family: 'Kiwi Maru', sans-serif;
+    line-height: 37px;
+    color: #90929a;
+    background: #dee9ff80;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #7D7F86;
+}
+img {
+    max-width: 100%;
+}
+/* コンテンツ全体に対する指定 */
+.wrapper {
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* 
+Header
+--------------------------*/
+/* ロゴとメニューの横並び */
+.page_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #73dad4E6;
+    width: 100%;
+    height: 100px;
+    border-top: 5px solid #FAFAFA;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+/* サイトタイトル */
+.site_title {
+    font-family: 'IBM Plex Sans JP', sans-serif;
+    font-weight: 550;
+    font-size: 35px;
+    text-align: left;
+    color: #FAFAFA;
+    vertical-align: middle;
+}
+/* ロゴ */
+.logo {
+    width: 53px;
+    vertical-align: middle;
+    padding-bottom: 5px;
+}
+/* メニューの横並び */
+.menu_nav {
+    display: flex;
+    font-size: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 3% 0;
+}
+.menu_nav li {
+    margin-left: 61px;
+}
+/* ホバー時のための設定 */
+.menu_nav li a {
+    position: relative;
+    display: inline-block;
+}
+/* ホバー時に下線を引く */
+.menu_nav li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: #192F60;
+    height: 1px;
+    transition: all 0.3s ease-in-out;
+}
+/* 新規予約ボタン */
+.request_btn {
+    background-color: #ffab40ff;
+    transition: all 0.3s;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+}
+.request_btn a {
+    color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.request_btn:hover {
+    background-color: #192F6000;
+    outline: solid 1px #192F60;
+}
+.request_btn:hover a {
+    color: #192F60;
+}
+.request_btn:hover a::after {
+    content: none;
+}
+/* TOPボタン */
+.index_btn {
+    background-color: #192F60;
+    transition: all 0.3s;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+}
+.index_btn a {
+    color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.index_btn:hover {
+    background-color: #192F6000;
+    outline: solid 1px #192F60;
+}
+.index_btn:hover a {
+    color: #192F60;
+}
+.index_btn:hover a::after {
+    content: none;
+}
+/*
+Main Visual
+--------------------------*/
+.main_content {
+    padding-top: 100px;
+    height: 100vh;
+}
+.content_title {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #192F60;
+    line-height: 58px;
+    padding: 10px 50px;
+}
+.content_title span {
+    display: block;
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    margin-left: 5px;
+}
+.switch_btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 150px;
+    align-items: center;
+}
+/* 前の週ボタン */
+.return_btn {
+    background-color: #91afe4;
+    width: 70px;
+    height: 30px;
+    line-height: 40px;
+    font-size: 1rem;
+}
+.return_btn a {
+    color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+/* 次の週ボタン */
+.next_btn {
+    background-color: #91afe4;
+    width: 70px;
+    height: 30px;
+    line-height: 40px;
+    font-size: 1rem;
+}
+.next_btn a {
+    color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+/*
+管理者メニュー
+--------------------------*/
+.admin_menu {
+    background-color: #FAFAFA;
+}
+.admin_content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 150px 50px;
+}
+/*
+管理者メニューボタン
+--------------------------*/
+.admin_btn {
+    background-color: #192F60;
+    transition: all 0.3s;
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+}
+.admin_btn a {
+    color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.admin_btn:hover {
+    background-color: #192F6000;
+    outline: solid 1px #192F60;
+}
+.admin_btn:hover a {
+    color: #192F60;
+}
+.admin_btn:hover a::after {
+    content: none;
+}
