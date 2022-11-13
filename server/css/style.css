@@ -229,3 +229,10 @@ Main Visual
 .admin_btn:hover a::after {
     content: none;
 }
+
+/*
+カレンダー
+--------------------------*/
+.container{
+    background-color: #FAFAFA;
+}
