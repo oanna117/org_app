@@ -1,6 +1,6 @@
-//  関数ファイル( functions.php ) 
 
 <?php
+// 関数ファイル( functions.php ) 
 require_once __DIR__ . '/config.php';
 // 接続処理を行う関数
 function connect_db()
