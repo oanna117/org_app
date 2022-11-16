@@ -23,10 +23,11 @@ img {
 }
 main {
     min-height: calc(100vh - 100px - 70px);
+    margin-top: 100px;
 }
 /* コンテンツ全体に対する指定 */
 .wrapper {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 0 4%;
 }
 
@@ -99,12 +100,12 @@ Header
     width: 80px;
     height: 40px;
     line-height: 40px;
+    text-align: center;
 }
 .request_btn a {
     color: #FFFFFF;
     width: 100%;
     height: 100%;
-    text-align: center;
 }
 .request_btn:hover {
     background-color: #192F6000;
@@ -123,12 +124,12 @@ Header
     width: 80px;
     height: 40px;
     line-height: 40px;
+    text-align: center;
 }
 .index_btn a {
     color: #FFFFFF;
     width: 100%;
     height: 100%;
-    text-align: center;
 }
 .index_btn:hover {
     background-color: #192F6000;
@@ -175,12 +176,12 @@ Main Visual
     height: 30px;
     line-height: 40px;
     font-size: 1rem;
+    text-align: center;
 }
 .return_btn a {
     color: #FFFFFF;
     width: 100%;
     height: 100%;
-    text-align: center;
 }
 /* 次の週ボタン */
 .next_btn {
@@ -189,18 +190,19 @@ Main Visual
     height: 30px;
     line-height: 40px;
     font-size: 1rem;
+    text-align: center;
 }
 .next_btn a {
     color: #FFFFFF;
     width: 100%;
     height: 100%;
-    text-align: center;
 }
 /*
 管理者メニュー
 --------------------------*/
 .admin_menu {
     background-color: #FAFAFA;
+    padding: 0 4%;
 }
 .admin_content {
     display: flex;
@@ -240,6 +242,8 @@ Main Visual
 .container{
     background-color: #FAFAFA;
 }
+
+
 
 .page_footer {
     height: 70px;
@@ -546,4 +550,3 @@ input[type="password"]::placeholder {
         padding: 10px;
     }
 } 
-

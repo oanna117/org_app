@@ -29,14 +29,19 @@
 
     <div id="main" class="main_content">
         <h2 class="content_title">
-        <i class="fa-regular fa-clock"></i> カレンダー<br><span>20XX/00/00 00:00:00 現在の予約状況</span>
+        <i class="fa-regular fa-clock"></i> カレンダー<br>
+        <span>
+        <?php
+        echo date('Y-m-d H:i:s')."\n"; //現在日時 20xx-12-31 23:59:59 ?> 現在の予約状況</span>
         </h2>
-        <ul class="switch_btn">
+        <!-- <ul class="switch_btn">
             <li class="return_btn"><a href="request.php"><i class="fa-thin fa-caret-left"></i>前の週</a></li>
             <li class="next_btn"><a href="request.php">次の週<i class="fa-thin fa-caret-right"></i></a></li>
-        </ul>
-    </div>
+        </ul> -->
     
+    <?php include_once __DIR__ . '/common/calender.html' ?>
+    </div>
+
     <div class="admin_menu">
         <h2 class="content_title"><i class="fa-solid fa-user-lock"></i> 管理者メニュー</h2>
         <ul class="admin_content">
@@ -46,6 +51,7 @@
         </ul>
     </div>
 
+    <?php include_once __DIR__ . '/common/_footer.html' ?>
 
 
 </body>
