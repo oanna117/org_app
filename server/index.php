@@ -8,25 +8,15 @@
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&family=Kiwi+Maru:wght@300;400;500&family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="../images/favicon.ico">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
     <header id="menu" class="page_header" wrapper>
         <h1 class="site_title">
-            <img src="../images/logo_white.gif" alt="IKEGAMIのロゴ" class="logo">
+            <img src="images/logo_white.gif" alt="IKEGAMIのロゴ" class="logo">
             <span>池上学園 公用車予約システム</span>
         </h1>
         <nav class="menu_content">
@@ -39,14 +29,19 @@
 
     <div id="main" class="main_content">
         <h2 class="content_title">
-        <i class="fa-regular fa-clock"></i> カレンダー<br><span>20XX/00/00 00:00:00 現在の予約状況</span>
+        <i class="fa-regular fa-clock"></i> カレンダー<br>
+        <span>
+        <?php
+        echo date('Y-m-d H:i:s')."\n"; //現在日時 20xx-12-31 23:59:59 ?> 現在の予約状況</span>
         </h2>
-        <ul class="switch_btn">
+        <!-- <ul class="switch_btn">
             <li class="return_btn"><a href="request.php"><i class="fa-thin fa-caret-left"></i>前の週</a></li>
             <li class="next_btn"><a href="request.php">次の週<i class="fa-thin fa-caret-right"></i></a></li>
-        </ul>
-    </div>
+        </ul> -->
     
+    <?php include_once __DIR__ . '/common/calender.html' ?>
+    </div>
+
     <div class="admin_menu">
         <h2 class="content_title"><i class="fa-solid fa-user-lock"></i> 管理者メニュー</h2>
         <ul class="admin_content">
@@ -56,6 +51,7 @@
         </ul>
     </div>
 
+    <?php include_once __DIR__ . '/common/_footer.html' ?>
 
 
 </body>
