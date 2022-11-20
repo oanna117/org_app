@@ -36,14 +36,14 @@ if (isset($_SESSION['current_user'])) {
                 <li class="index_btn"><a href="index.php"><i class="fa-solid fa-house-chimney"></i> TOP</a></li>
                 <li class="right_content">
         <div class="login_info">
-            <?php if (!empty($current_user)) : ?>
+            <!-- <?php if (!empty($current_user)) : ?>
                 <p>
-                    <?= $current_user['id'] ?>さん
+                    <?= $current_user['id'] ?>さん -->
                 </p>
                 <a class="header_logout_button" href="/logout.php" class="nav-link">ログアウト</a>
-            <?php else : ?>
+            <!-- <?php else : ?>
                 <a class="header_login_button" href="/login.php" class="nav-link">ログイン</a>
-            <?php endif; ?>
+            <?php endif; ?> -->
             </li>
             </ul>
         </nav>
