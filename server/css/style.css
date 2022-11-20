@@ -146,13 +146,13 @@ Main Visual
 --------------------------*/
 .main_content {
     padding: 100px 4% 0;
-    height: 100vh;
+    height: 90vh;
 }
 .content_title {
     font-family: 'Noto Sans JP', sans-serif;
     color: #192F60;
     line-height: 58px;
-    padding: 10px 50px;
+    padding: 20px 50px;
 }
 .content_title span {
     display: block;
@@ -207,7 +207,8 @@ Main Visual
 .admin_content {
     display: flex;
     justify-content: space-around;
-    padding: 20px 150px 50px;
+    padding: 10px 150px 70px;
+    margin-bottom: 0;
 }
 /*
 管理者メニューボタン
@@ -241,6 +242,8 @@ Main Visual
 --------------------------*/
 .container{
     background-color: #FAFAFA;
+    padding: 0 20px 5px ;
+    max-width: 150vh;
 }
 
 
@@ -491,6 +494,35 @@ input[type="password"]::placeholder {
     background: #000000;
     color: #FFFFFF;
     text-decoration: none;
+}
+
+.right_content {
+    display: flex;
+}
+.login_info {
+    margin-right: 20px;
+    align-items: center;
+    display: flex;
+}
+.login_info p {
+    margin-right: 10px;
+    font-size: 1rem;
+    margin-bottom: 0;
+    color: #FFFFFF;
+}
+.header_logout_button {
+    align-items: center;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.header_login_button {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right: 10px;
 }
 
 /* レスポンシブ */

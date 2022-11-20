@@ -95,3 +95,46 @@ function check_exist_user($account_name)
         return false;
     }
 }
+
+function login_validate($account_name, $password)
+{
+    $errors = [];
+
+    if (empty($account_name)) {
+        $errors[] = MSG_NAME_REQUIRED;
+    }
+
+    if (empty($password)) {
+        $errors[] = MSG_PASSWORD_REQUIRED;
+    }
+
+    return $errors;
+}
+
+function find_user_by_account($account_name)
+{
+    $dbh = connect_db();
+
+    $sql = <<<EOM
+    SELECT
+        *
+    FROM
+        accounts
+    WHERE
+        account = :account;
+    EOM;
+
+    $stmt = $dbh->prepare($sql);
+    $stmt->bindValue(':account', $account_name, PDO::PARAM_STR);
+    $stmt->execute();
+
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+function user_login($user)
+{
+    $_SESSION['current_user']['id'] = $user['id'];
+    $_SESSION['current_user']['account'] = $user['account'];
+    header('Location: ../index.php');
+    exit;
+}

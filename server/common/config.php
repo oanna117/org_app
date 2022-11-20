@@ -7,3 +7,4 @@ define('PASSWORD', '1234');
 define('MSG_NAME_REQUIRED', 'アカウント名が未入力です');
 define('MSG_PASSWORD_REQUIRED', 'パスワードが未入力です');
 define('MSG_NAME_DUPLICATE', 'そのアカウント名は既に登録されています');
+define('MSG_ACCOUNT_PASSWORD_NOT_MATCH', 'アカウント名かパスワードが間違っています');

@@ -1,3 +1,14 @@
+<?php
+
+// セッション開始
+session_start();
+
+$current_user = '';
+
+if (isset($_SESSION['current_user'])) {
+    $current_user = $_SESSION['current_user'];
+}
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -23,6 +34,17 @@
             <ul class="menu_nav">
                 <li class="request_btn"><a href="request.php">新規予約</a></li>
                 <li class="index_btn"><a href="index.php"><i class="fa-solid fa-house-chimney"></i> TOP</a></li>
+                <li class="right_content">
+        <div class="login_info">
+            <?php if (!empty($current_user)) : ?>
+                <p>
+                    <?= $current_user['id'] ?>さん
+                </p>
+                <a class="header_logout_button" href="/logout.php" class="nav-link">ログアウト</a>
+            <?php else : ?>
+                <a class="header_login_button" href="/login.php" class="nav-link">ログイン</a>
+            <?php endif; ?>
+            </li>
             </ul>
         </nav>
     </header>
